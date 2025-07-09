@@ -34,10 +34,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center space-x-4">
-            <div className="text-2xl font-bold text-gray-900 dark:text-white">
+            <div className="text-2xl font-bold text-slate-800 dark:text-slate-100">
               Srilekha Jella
             </div>
-            <div className="hidden md:block text-sm text-gray-600 dark:text-gray-400">
+            <div className="hidden md:block text-sm text-slate-600 dark:text-slate-400">
               Full-Stack Developer | Prompt Engineer | Game Enthusiast
             </div>
           </div>
@@ -50,13 +50,13 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   activeSection === item.id
-                    ? 'text-green-700 dark:text-green-400'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400'
+                    ? 'text-sky-600 dark:text-sky-400'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400'
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-green-600 rounded-full"></span>
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-sky-600 dark:bg-sky-400 rounded-full"></span>
                 )}
               </button>
             ))}
@@ -64,15 +64,15 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
 
           {/* Social Links & Dark Mode Toggle */}
           <div className="flex items-center space-x-4">
-            <a href="https://github.com" className="text-gray-600 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors">
+            <a href="https://github.com" className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" className="text-gray-600 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors">
+            <a href="https://linkedin.com" className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-green-700 dark:hover:text-green-400 transition-colors"
+              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
             >
               {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
@@ -80,7 +80,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+              className="lg:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -89,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden mt-4 py-4 border-t border-gray-200 dark:border-gray-700">
+          <nav className="lg:hidden mt-4 py-4 border-t border-slate-200 dark:border-slate-700">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <button
@@ -97,8 +97,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
                   onClick={() => scrollToSection(item.id)}
                   className={`px-4 py-2 text-left text-sm font-medium transition-colors duration-200 ${
                     activeSection === item.id
-                      ? 'text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/20'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400'
+                      ? 'text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-900/20'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400'
                   }`}
                 >
                   {item.label}

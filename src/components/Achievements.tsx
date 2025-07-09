@@ -8,7 +8,7 @@ const Achievements: React.FC = () => {
       organization: 'BRECW',
       description: 'Won first place in the innovation competition for developing a creative tech solution that impressed the judges with its practical application and technical excellence.',
       icon: <Trophy className="w-6 h-6" />,
-      gradient: 'from-yellow-500 to-yellow-600',
+      gradient: 'from-yellow-500 to-orange-500',
       type: 'Competition'
     },
     {
@@ -16,7 +16,7 @@ const Achievements: React.FC = () => {
       organization: 'DevTown',
       description: 'Completed comprehensive full-stack development program covering modern web technologies, database management, and deployment strategies.',
       icon: <Certificate className="w-6 h-6" />,
-      gradient: 'from-blue-500 to-blue-600',
+      gradient: 'from-blue-500 to-cyan-500',
       type: 'Certification'
     },
     {
@@ -24,7 +24,7 @@ const Achievements: React.FC = () => {
       organization: 'ServiceNow',
       description: 'Earned micro-certification in ServiceNow platform, demonstrating proficiency in workflow automation and enterprise service management.',
       icon: <Award className="w-6 h-6" />,
-      gradient: 'from-green-500 to-green-600',
+      gradient: 'from-green-500 to-emerald-500',
       type: 'Certification'
     }
   ];
@@ -40,10 +40,10 @@ const Achievements: React.FC = () => {
     <section id="achievements" className="py-24 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-4">
             Achievements & Certifications
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Recognition and milestones that mark my journey in technology
           </p>
         </div>
@@ -53,23 +53,23 @@ const Achievements: React.FC = () => {
           {achievements.map((achievement, index) => (
             <div
               key={achievement.title}
-              className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 relative overflow-hidden"
+              className="group bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-slate-200 dark:border-slate-700 relative overflow-hidden"
             >
               {/* Background Effect */}
-              <div className="absolute inset-0 bg-green-50 dark:bg-green-900/20 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 bg-gradient-to-br ${achievement.gradient} transition-opacity duration-300`}></div>
               
               {/* Header */}
               <div className="flex items-start gap-4 mb-4">
-                <div className={`p-3 bg-gradient-to-r ${achievement.gradient} text-white rounded-xl group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${achievement.gradient} text-white group-hover:scale-110 transition-transform duration-300`}>
                   {achievement.icon}
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium">
+                    <span className={`px-2 py-1 bg-gradient-to-r ${achievement.gradient} bg-opacity-10 text-slate-700 dark:text-slate-300 rounded-full text-xs font-medium`}>
                       {achievement.type}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white leading-snug">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 leading-snug">
                     {achievement.title}
                   </h3>
                 </div>
@@ -77,14 +77,14 @@ const Achievements: React.FC = () => {
 
               {/* Organization */}
               <div className="flex items-center gap-2 mb-4">
-                <Star className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <Star className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                   {achievement.organization}
                 </span>
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                 {achievement.description}
               </p>
 
@@ -99,12 +99,12 @@ const Achievements: React.FC = () => {
           {highlights.map((highlight, index) => (
             <div
               key={highlight.label}
-              className="text-center bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="text-center bg-gradient-to-br from-slate-50 to-sky-50 dark:from-slate-800 dark:to-slate-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              <div className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
                 {highlight.value}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-sm text-slate-600 dark:text-slate-400">
                 {highlight.label}
               </div>
             </div>
@@ -112,16 +112,16 @@ const Achievements: React.FC = () => {
         </div>
 
         {/* Additional Achievements */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center">
+        <div className="bg-gradient-to-r from-sky-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 text-center">
           <div className="flex justify-center mb-6">
-            <div className="p-4 bg-green-100 dark:bg-green-900 rounded-full">
-              <Target className="w-8 h-8 text-green-700 dark:text-green-400" />
+            <div className="p-4 bg-gradient-to-r from-sky-500 to-purple-500 rounded-full">
+              <Target className="w-8 h-8 text-white" />
             </div>
           </div>
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mb-4">
             Continuous Learning & Growth
           </h3>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Beyond formal certifications, I'm constantly expanding my skill set through online courses, 
             hackathons, and personal projects. I believe in staying updated with the latest technologies 
             and industry best practices to deliver innovative solutions.
