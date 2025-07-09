@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
       description: 'A comprehensive Learning Management System built with MERN stack featuring separate dashboards for students, teachers, and administrators. Includes course management, assignment tracking, and interactive learning modules.',
       tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'JWT', 'Socket.io'],
       icon: <Monitor className="w-6 h-6" />,
-      gradient: '#B0DB9C',
+      gradient: '#4B5945',
       image: 'https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
       description: 'An engaging 2D arcade game developed in Unity6 with C#. Features 3 challenging levels, 5 unique power-ups, smooth animations, and progressive difficulty scaling for an immersive gaming experience.',
       tech: ['Unity3D', 'C#', 'Game Design', '2D Graphics', 'Animation'],
       icon: <Gamepad2 className="w-6 h-6" />,
-      gradient: '#CAE8BD',
+      gradient: '#66785F',
       image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=600'
     },
     {
@@ -24,19 +24,19 @@ const Projects: React.FC = () => {
       description: 'Machine Learning application for early detection of Autism Spectrum Disorder using Python and Streamlit. Implements advanced ML algorithms to analyze behavioral patterns and provide accurate assessments.',
       tech: ['Python', 'Streamlit', 'Machine Learning', 'Pandas', 'Scikit-learn'],
       icon: <Brain className="w-6 h-6" />,
-      gradient: '#DDF6D2',
+      gradient: '#91AC8F',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600'
     }
   ];
 
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-slate-900">
+    <section id="projects" className="py-24" style={{backgroundColor: '#4B5945'}}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{color: '#B2C9AD'}}>
             A showcase of my recent work and technical achievements
           </p>
         </div>
@@ -45,7 +45,8 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200 dark:border-gray-700"
+              className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              style={{backgroundColor: '#66785F'}}
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -64,11 +65,11 @@ const Projects: React.FC = () => {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-gray-900 group-hover:to-gray-600 dark:group-hover:from-white dark:group-hover:to-gray-400">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                <p className="mb-4 leading-relaxed" style={{color: '#B2C9AD'}}>
                   {project.description}
                 </p>
 
@@ -77,7 +78,8 @@ const Projects: React.FC = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
+                      className="px-3 py-1 rounded-full text-xs font-medium text-white"
+                      style={{backgroundColor: '#4B5945'}}
                     >
                       {tech}
                     </span>
@@ -86,11 +88,11 @@ const Projects: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200">
+                  <button className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors duration-200 text-white" style={{backgroundColor: '#4B5945'}}>
                     <Github className="w-4 h-4" />
                     <span className="text-sm">Code</span>
                   </button>
-                  <button className="flex items-center gap-2 px-4 py-2 text-green-800 rounded-lg hover:opacity-90 transition-opacity duration-200" style={{backgroundColor: project.gradient}}>
+                  <button className="flex items-center gap-2 px-4 py-2 text-white rounded-lg hover:opacity-90 transition-opacity duration-200" style={{backgroundColor: project.gradient}}>
                     <ExternalLink className="w-4 h-4" />
                     <span className="text-sm">Demo</span>
                   </button>
@@ -98,14 +100,14 @@ const Projects: React.FC = () => {
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/5 dark:to-gray-900/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none" style={{backgroundColor: project.gradient}}></div>
             </div>
           ))}
         </div>
 
         {/* View More Projects Button */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center gap-2 px-8 py-4 text-green-800 font-semibold rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl" style={{backgroundColor: '#B0DB9C'}}>
+          <button className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl" style={{backgroundColor: '#B2C9AD'}}>
             <Github className="w-5 h-5" />
             View More on GitHub
           </button>

@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className={`${darkMode ? 'dark' : ''}`}>
-      <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-900 dark:to-gray-800 min-h-screen transition-all duration-300" style={{background: darkMode ? '' : 'linear-gradient(to bottom right, #ECFAE5, #DDF6D2)'}}>
+      <div className="min-h-screen transition-all duration-300" style={{background: darkMode ? 'linear-gradient(to bottom right, #2D3A2B, #1F2A1E)' : 'linear-gradient(to bottom right, #4B5945, #66785F)'}}>
         <Header 
           activeSection={activeSection} 
           darkMode={darkMode} 

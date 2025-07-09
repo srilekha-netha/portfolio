@@ -7,48 +7,48 @@ const Skills: React.FC = () => {
       title: 'Languages',
       icon: <Code className="w-6 h-6" />,
       skills: ['Python', 'Java', 'JavaScript', 'SQL', 'C#'],
-      color: '#B0DB9C'
+      color: '#4B5945'
     },
     {
       title: 'Web Technologies',
       icon: <Server className="w-6 h-6" />,
       skills: ['HTML5', 'CSS3', 'NodeJS', 'ReactJS', 'ExpressJS'],
-      color: '#CAE8BD'
+      color: '#66785F'
     },
     {
       title: 'Tools & Platforms',
       icon: <Cloud className="w-6 h-6" />,
       skills: ['Git', 'AWS (S3, EC2)', 'Salesforce', 'ServiceNow'],
-      color: '#DDF6D2'
+      color: '#91AC8F'
     },
     {
       title: 'Game Development',
       icon: <Gamepad2 className="w-6 h-6" />,
       skills: ['Unity3D', 'C#', 'Game Design', '2D/3D Graphics'],
-      color: '#ECFAE5'
+      color: '#B2C9AD'
     },
     {
       title: 'Databases',
       icon: <Database className="w-6 h-6" />,
       skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'Firebase'],
-      color: '#B0DB9C'
+      color: '#4B5945'
     },
     {
       title: 'Other Skills',
       icon: <Zap className="w-6 h-6" />,
       skills: ['Prompt Engineering', 'Machine Learning', 'API Development', 'UI/UX Design'],
-      color: '#CAE8BD'
+      color: '#66785F'
     }
   ];
 
   return (
-    <section id="skills" className="py-24 dark:from-gray-900 dark:to-gray-800" style={{background: 'linear-gradient(to bottom right, #DDF6D2, #CAE8BD)'}}>
+    <section id="skills" className="py-24" style={{background: 'linear-gradient(to bottom right, #91AC8F, #B2C9AD)'}}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Skills & Expertise
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{color: '#4B5945'}}>
             A comprehensive overview of my technical skills and areas of expertise
           </p>
         </div>
@@ -57,13 +57,14 @@ const Skills: React.FC = () => {
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700"
+              className="group rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              style={{backgroundColor: '#66785F'}}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-xl text-green-800 group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: category.color}}>
+                <div className="p-3 rounded-xl text-white group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: category.color}}>
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-xl font-semibold text-white">
                   {category.title}
                 </h3>
               </div>
@@ -72,7 +73,8 @@ const Skills: React.FC = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skill}
-                    className="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300"
+                    className="flex items-center gap-2 transition-colors duration-300" 
+                    style={{color: '#B2C9AD'}}
                     style={{ animationDelay: `${skillIndex * 100}ms` }}
                   >
                     <div className="w-2 h-2 rounded-full" style={{backgroundColor: category.color}}></div>
@@ -82,7 +84,7 @@ const Skills: React.FC = () => {
               </div>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300" style={{backgroundColor: category.color}}></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-300" style={{backgroundColor: category.color}}></div>
             </div>
           ))}
         </div>
@@ -96,10 +98,10 @@ const Skills: React.FC = () => {
             { label: 'Certifications', value: '5+' }
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-sm" style={{color: '#4B5945'}}>
                 {stat.label}
               </div>
             </div>
