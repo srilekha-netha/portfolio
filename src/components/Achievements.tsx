@@ -8,7 +8,7 @@ const Achievements: React.FC = () => {
       organization: 'BRECW',
       description: 'Won first place in the innovation competition for developing a creative tech solution that impressed the judges with its practical application and technical excellence.',
       icon: <Trophy className="w-6 h-6" />,
-      gradient: '#B0DB9C',
+      gradient: 'from-yellow-500 to-yellow-600',
       type: 'Competition'
     },
     {
@@ -16,7 +16,7 @@ const Achievements: React.FC = () => {
       organization: 'DevTown',
       description: 'Completed comprehensive full-stack development program covering modern web technologies, database management, and deployment strategies.',
       icon: <Certificate className="w-6 h-6" />,
-      gradient: '#CAE8BD',
+      gradient: 'from-blue-500 to-blue-600',
       type: 'Certification'
     },
     {
@@ -24,7 +24,7 @@ const Achievements: React.FC = () => {
       organization: 'ServiceNow',
       description: 'Earned micro-certification in ServiceNow platform, demonstrating proficiency in workflow automation and enterprise service management.',
       icon: <Award className="w-6 h-6" />,
-      gradient: '#DDF6D2',
+      gradient: 'from-green-500 to-green-600',
       type: 'Certification'
     }
   ];
@@ -56,16 +56,16 @@ const Achievements: React.FC = () => {
               className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 relative overflow-hidden"
             >
               {/* Background Effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-300" style={{backgroundColor: achievement.gradient}}></div>
+              <div className="absolute inset-0 bg-green-50 dark:bg-green-900/20 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               
               {/* Header */}
               <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-xl text-green-800 group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: achievement.gradient}}>
+                <div className={`p-3 bg-gradient-to-r ${achievement.gradient} text-white rounded-xl group-hover:scale-110 transition-transform duration-300`}>
                   {achievement.icon}
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-1 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium" style={{backgroundColor: achievement.gradient, opacity: 0.3}}>
+                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium">
                       {achievement.type}
                     </span>
                   </div>
@@ -89,7 +89,7 @@ const Achievements: React.FC = () => {
               </p>
 
               {/* Hover Indicator */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" style={{backgroundColor: achievement.gradient}}></div>
+              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${achievement.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
             </div>
           ))}
         </div>
@@ -99,8 +99,7 @@ const Achievements: React.FC = () => {
           {highlights.map((highlight, index) => (
             <div
               key={highlight.label}
-              className="text-center dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              style={{background: 'linear-gradient(to bottom right, #DDF6D2, #CAE8BD)'}}
+              className="text-center bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                 {highlight.value}
@@ -113,10 +112,10 @@ const Achievements: React.FC = () => {
         </div>
 
         {/* Additional Achievements */}
-        <div className="dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center" style={{background: 'linear-gradient(to right, #ECFAE5, #DDF6D2)'}}>
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center">
           <div className="flex justify-center mb-6">
-            <div className="p-4 rounded-full" style={{backgroundColor: '#B0DB9C'}}>
-              <Target className="w-8 h-8 text-green-800" />
+            <div className="p-4 bg-green-100 dark:bg-green-900 rounded-full">
+              <Target className="w-8 h-8 text-green-700 dark:text-green-400" />
             </div>
           </div>
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">

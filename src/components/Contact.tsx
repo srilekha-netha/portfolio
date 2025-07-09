@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 dark:from-gray-900 dark:to-gray-800" style={{background: 'linear-gradient(to bottom right, #CAE8BD, #B0DB9C)'}}>
+    <section id="contact" className="py-24 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={info.label} className="flex items-center gap-4">
-                  <div className="p-3 text-green-800 rounded-xl" style={{backgroundColor: '#DDF6D2'}}>
+                  <div className="p-3 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-400 rounded-xl">
                     {info.icon}
                   </div>
                   <div>
@@ -207,8 +207,7 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                className="w-full text-green-800 font-semibold py-4 px-6 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
-                style={{backgroundColor: '#B0DB9C'}}
+                className="w-full bg-green-600 text-white font-semibold py-4 px-6 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 Send Message
