@@ -25,7 +25,7 @@ const About: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 dark:text-slate-100">Education</h3>
-                    <p className="text-slate-600 dark:text-slate-400">B.E. in Computer Science</p>
+                    <p className="text-slate-600 dark:text-slate-400">BTech in Computer Science</p>
                   </div>
                 </div>
 
@@ -44,7 +44,7 @@ const About: React.FC = () => {
                     <Calendar className="w-6 h-6 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 dark:text-slate-100">Graduating</h3>
+                    <h3 className="font-semibold text-slate-900 dark:text-slate-100">Graduated</h3>
                     <p className="text-slate-600 dark:text-slate-400">2025</p>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const About: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-900 dark:text-slate-100">Interests</h3>
-                    <p className="text-slate-600 dark:text-slate-400">Web Tech, Game Design, AI</p>
+                    <p className="text-slate-600 dark:text-slate-400">Web Tech,Software Development, Game Design, AI</p>
                   </div>
                 </div>
               </div>
@@ -68,7 +68,7 @@ const About: React.FC = () => {
                   My Journey
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                  Currently pursuing B.E. in Computer Science and Engineering from Bhoj Reddy Engineering College, Hyderabad, graduating in 2025. I'm passionate about creating innovative digital solutions and exploring the intersection of technology and creativity.
+                 I graduated with a B.E. in Computer Science and Engineering from Bhoj Reddy Engineering College, Hyderabad, in 2025. I'm passionate about creating innovative digital solutions and exploring the intersection of technology and creativity.
                 </p>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                   My expertise spans across full-stack web development, game design, and prompt engineering. I enjoy building user-centric applications and exploring emerging technologies like AI and machine learning.

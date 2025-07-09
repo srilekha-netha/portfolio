@@ -37,9 +37,6 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
             <div className="text-2xl font-bold text-slate-800 dark:text-slate-100">
               Srilekha Jella
             </div>
-            <div className="hidden md:block text-sm text-slate-600 dark:text-slate-400">
-              Full-Stack Developer | Prompt Engineer | Game Enthusiast
-            </div>
           </div>
 
           {/* Desktop Navigation */}

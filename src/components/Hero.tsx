@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Mail, ArrowDown, User } from 'lucide-react';
+import { Download, Mail, ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white dark:bg-slate-900">
       {/* Background Animation */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-sky-200/30 dark:bg-sky-900/20 rounded-full blur-3xl animate-pulse"></div>
@@ -19,10 +19,14 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4 py-32 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Profile Image Placeholder */}
-          <div className="relative mx-auto mb-8 w-48 h-48 rounded-full bg-gradient-to-br from-sky-400 to-purple-500 p-1 animate-pulse">
-            <div className="w-full h-full rounded-full bg-white dark:bg-slate-800 flex items-center justify-center">
-              <User className="w-24 h-24 text-slate-400 dark:text-slate-600" />
+          {/* Profile Image */}
+          <div className="relative mx-auto mb-8 w-48 h-48 rounded-full bg-gradient-to-br from-sky-400 to-purple-500 p-1 shadow-lg">
+            <div className="w-full h-full rounded-full overflow-hidden">
+              <img
+                src="src\img\sri-removebg-preview.jpg" // ✅ ensure image is in public/img/
+                alt="Srilekha Jella"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -41,16 +45,21 @@ const Hero: React.FC = () => {
 
           {/* Description */}
           <p className="text-lg text-slate-500 dark:text-slate-500 mb-12 max-w-2xl mx-auto animate-fade-in-delay-2">
-            Full-Stack Developer | Prompt Engineer | Game Enthusiast
+            Web Developer | Prompt Engineer | Game Enthusiast
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-delay-3">
-            <button className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-sky-500 to-purple-600 text-white font-semibold rounded-xl hover:from-sky-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <a
+              href="https://drive.google.com/file/d/1M8Pk0urR9P2L7Ux82G2Rcoui2R-FEh4E/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-sky-500 to-purple-600 text-white font-semibold rounded-xl hover:from-sky-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
               <Download className="w-5 h-5" />
               View Resume
-            </button>
-            <button 
+            </a>
+            <button
               onClick={() => scrollToSection('contact')}
               className="inline-flex items-center gap-2 px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-semibold rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
@@ -60,7 +69,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <button 
+          <button
             onClick={() => scrollToSection('about')}
             className="animate-bounce text-slate-400 dark:text-slate-500 hover:text-sky-500 dark:hover:text-sky-400 transition-colors"
           >
