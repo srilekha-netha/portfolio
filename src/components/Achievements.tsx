@@ -31,9 +31,9 @@ const Achievements: React.FC = () => {
 
   const highlights = [
     { label: 'Competitions Won', value: '2+' },
-    { label: 'Certifications Earned', value: '5+' },
+    { label: 'Certifications Earned', value: '3+' },
     { label: 'Recognition Awards', value: '3+' },
-    { label: 'Technical Achievements', value: '10+' }
+    { label: 'Technical Achievements', value: '5+' }
   ];
 
   return (
