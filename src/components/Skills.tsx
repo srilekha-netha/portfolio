@@ -30,13 +30,13 @@ const Skills: React.FC = () => {
     {
       title: 'Databases',
       icon: <Database className="w-6 h-6" />,
-      skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'Firebase'],
+      skills: ['MySQL', 'MongoDB'],
       color: 'from-indigo-500 to-blue-500'
     },
     {
       title: 'Other Skills',
       icon: <Zap className="w-6 h-6" />,
-      skills: ['Prompt Engineering', 'Machine Learning', 'API Development', 'UI/UX Design'],
+      skills: ['Prompt Engineering', 'UI/UX Design'],
       color: 'from-pink-500 to-rose-500'
     }
   ];
@@ -88,12 +88,11 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Skill Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            { label: 'Years of Experience', value: '3+' },
-            { label: 'Projects Completed', value: '15+' },
-            { label: 'Technologies Mastered', value: '20+' },
-            { label: 'Certifications', value: '5+' }
+            { label: 'Projects Completed', value: '5+' },
+            { label: 'Technologies Mastered', value: '10+' },
+            { label: 'Certifications', value: '3+' }
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">

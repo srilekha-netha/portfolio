@@ -68,18 +68,15 @@ const About: React.FC = () => {
                   My Journey
                 </h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                 I graduated with a B.E. in Computer Science and Engineering from Bhoj Reddy Engineering College, Hyderabad, in 2025. I'm passionate about creating innovative digital solutions and exploring the intersection of technology and creativity.
+                 I graduated with a BTech in Computer Science and Engineering from Bhoj Reddy Engineering College, Hyderabad, in 2025. I'm passionate about creating innovative digital solutions and exploring the intersection of technology and creativity.
                 </p>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                   My expertise spans across full-stack web development, game design, and prompt engineering. I enjoy building user-centric applications and exploring emerging technologies like AI and machine learning.
                 </p>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                  When I'm not coding, you'll find me experimenting with new frameworks, contributing to open-source projects, or designing engaging game experiences. I believe in continuous learning and staying updated with the latest industry trends.
-                </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {['Problem Solver', 'Creative Thinker', 'Team Player', 'Quick Learner'].map((trait) => (
+                {['Problem Solver', 'Creative Thinker','Leadership', 'Team Player', 'Quick Learner'].map((trait) => (
                   <span
                     key={trait}
                     className="px-4 py-2 bg-gradient-to-r from-sky-100 to-purple-100 dark:from-sky-900 dark:to-purple-900 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"

@@ -61,10 +61,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, darkMode, toggleDarkMode
 
           {/* Social Links & Dark Mode Toggle */}
           <div className="flex items-center space-x-4">
-            <a href="https://github.com" className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+            <a href="https://github.com/srilekha-netha" className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://linkedin.com" className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+            <a href="https://www.linkedin.com/in/srilekha-netha/" className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
             <button
