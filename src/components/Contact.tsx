@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
             Get In Touch
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-             I'm currently seeking exciting career opportunities as a Software Developer. If you're hiring or open to collaboration, feel free to connect!
+            I'm open to exciting opportunities in Software Development, QA Automation, and Data Engineering. If you're hiring or interested in collaborating, let's connect!
           </p>
         </div>
 
